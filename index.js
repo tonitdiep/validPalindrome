@@ -19,3 +19,11 @@ Explanation: "amanaplanacanalpanama" is a palindrome.
     namanalplanaca
     amanaplanacanalpanama
 */
+var isPalindrome = function(s) {
+    var removeChar = s.replace(/[^A-Z0-9]/ig, "").toLowerCase();
+
+    var verifyPalindrome = removeChar.split('').reverse().join('');
+   
+    return removeChar === verifyPalindrome;
+
+};
